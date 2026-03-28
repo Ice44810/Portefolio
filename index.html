@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur Full-Stack | YANGUE KESSE Issa</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Configuration de la police Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            /* Fond très sombre */
+        }
+
+        /* Style pour les cartes de technologie */
+        .tech-card {
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+        }
+
+        /* Style pour les messages de statut */
+        .status-success {
+            background-color: #166534;
+            /* vert foncé */
+            color: #dcfce7;
+            /* vert clair */
+        }
+
+        .status-error {
+            background-color: #991b1b;
+            /* rouge foncé */
+            color: #fee2e2;
+            /* rouge clair */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+
+    <!-- En-tête et Navigation (Sticky) -->
+    <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#accueil" class="text-2xl font-extrabold text-indigo-400 tracking-wider">
+                YANGUE KESSE Issa
+            </a>
+            <div class="flex space-x-4 sm:space-x-6 text-sm font-medium">
+                <a href="#competences"
+                    class="hover:text-indigo-400 transition duration-300 hidden sm:inline-block">Compétences</a>
+                <a href="#experience" class="hover:text-indigo-400 transition duration-300">Expérience</a>
+                <a href="#projets" class="hover:text-indigo-400 transition duration-300">Projets</a>
+                <a href="#contact" class="hover:text-indigo-400 transition duration-300">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Accueil (Hero) -->
+        <section id="accueil" class="container mx-auto px-4 py-16 sm:py-15 flex flex-col items-center text-center">
+            <img src="./img/Image fond.jpg" alt="Votre Photo de Profil"
+                class="w-32 h-32 rounded-full object-cover border-4 border-indigo-500 shadow-2xl mb-6">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white">
+                Développeur <span class="text-indigo-400">Full-Stack</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-5 text-gray-300 max-w-3xl">
+                En reconversion professionnelle, je suis passionné par la création d'applications web performantes et
+                évolutives. Avec des connaissances en JavaScript, Node.js, Symfony et les bases de données modernes, je
+                suis prêt à relever de nouveaux défis et à contribuer à des projets innovants.
+            </p>
+        </section>
+
+        <!-- Section Compétences (Skills) -->
+        <section id="competences" class="container mx-auto px-4 py-15 sm:py-24">
+            <h2 class="text-4xl font-bold mb-12 text-center text-indigo-400">Compétences Techniques</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                <!-- Catégorie Front-End -->
+                <div class="tech-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-300">Front-End</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li class="flex items-center"><span class="text-yellow-400 mr-2">✦</span> JavaScript (ES6+)</li>
+                        <li class="flex items-center"><span class="text-cyan-400 mr-2">✦</span> Vue.js / Angular</li>
+                        <li class="flex items-center"><span class="text-purple-400 mr-2">✦</span> Tailwind CSS /
+                            Bootstrap</li>
+                    </ul>
+                </div>
+
+                <!-- Catégorie Back-End -->
+                <div class="tech-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-300">Back-End</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li class="flex items-center"><span class="text-green-400 mr-2">✦</span> Node.js / Express</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">✦</span> Python </li>
+                        <li class="flex items-center"><span class="text-yellow-600 mr-2">✦</span> Symfony / Laravel</li>
+                    </ul>
+                </div>
+
+                <!-- Catégorie Bases de Données -->
+                <div class="tech-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-300">Bases de Données</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li class="flex items-center"><span class="text-blue-500 mr-2">✦</span> PostgreSQL / MySQL</li>
+                        <li class="flex items-center"><span class="text-yellow-500 mr-2">✦</span> MongoDB (NoSQL)</li>
+                        <li class="flex items-center"><span class="text-indigo-500 mr-2">✦</span> Firestore / Supabase
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Catégorie Outils & DevOps -->
+                <div class="tech-card bg-gray-800 p-6 rounded-xl shadow-xl border border-gray-700">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-300">Outils & DevOps</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li class="flex items-center"><span class="text-orange-600 mr-2">✦</span> Git & GitHub</li>
+                        <li class="flex items-center"><span class="text-blue-700 mr-2">✦</span> Docker & Kubernetes</li>
+                        <li class="flex items-center"><span class="text-green-600 mr-2">✦</span> Netlify </li>
+                        <li class="flex items-center"><span class="text-red-700 mr-2">✦</span> CI/CD (GitHub Actions)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expérience Professionnelle -->
+        <section id="experience" class="bg-gray-800 py-16 sm:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center text-indigo-400">Expérience Professionnelle</h2>
+
+                <div class="max-w-4xl mx-auto space-y-8">
+
+                    <!-- Expérience 1 -->
+                    <div class="relative pl-6 sm:pl-10 pb-8 border-l-2 border-indigo-600">
+                        <!-- Cercle de repère -->
+                        <div
+                            class="absolute w-4 h-4 bg-indigo-600 rounded-full mt-1 -left-2 sm:-left-2.5 border-4 border-gray-800">
+                        </div>
+
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
+                            <p class="text-xs font-medium text-gray-400 mb-1">Septembre 2025 - Aujourd'hui</p>
+                            <h3 class="text-2xl font-semibold text-white">Formation Développeur Full-Stack</h3>
+                            <p class="text-indigo-300 mb-3">Ilaria Digital School</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                                <li>Fontend : HTML, CSS, Bootstrap, Javascript</li>
+                                <li>Backend : PHP, PYTHON, NODEJS</li>
+                                <li>Base de données : MYSQL, MONGODB, PHPMYADMIN, SQL.</li>
+                                <li>Framwork : React, Angular, Vue js, Symfony, Laravel.</li>
+                                <li>Mise en place de l'intégration et du déploiement continus (CI/CD) via GitHub Actions
+                                    et Docker.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expérience 2 -->
+                    <div class="relative pl-6 sm:pl-10 pb-8 border-l-2 border-indigo-600">
+                        <div
+                            class="absolute w-4 h-4 bg-indigo-600 rounded-full mt-1 -left-2 sm:-left-2.5 border-4 border-gray-800">
+                        </div>
+
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
+                            <p class="text-xs font-medium text-gray-400 mb-1">Février 2026 - Mars 2026</p>
+                            <h3 class="text-2xl font-semibold text-white">Stagiaire Développeur Junior</h3>
+                            <p class="text-indigo-300 mb-3">E&R Prestige location</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                                <li>Conception site web vitrine de location de mobiliers évenementiel.</li>
+                                <li>Intégration de "Formsubmit" formulaire d'envoie de mail client 100 % gratuit.</li>
+                                <li>Utilisation de Bootstrap 5 pour un design moderne et responsive.</li>
+                                <li>Mise en ligne sur Netlify.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expérience 3 -->
+                    <div class="relative pl-6 sm:pl-10 pb-8 border-l-2 border-indigo-600">
+                        <div
+                            class="absolute w-4 h-4 bg-indigo-600 rounded-full mt-1 -left-2 sm:-left-2.5 border-4 border-gray-800">
+                        </div>
+
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-700">
+                            <p class="text-xs font-medium text-gray-400 mb-1">[2021 - 2025]</p>
+                            <h3 class="text-2xl font-semibold text-white">Dirigeant d'une Entreprise</h3>
+                            <p class="text-indigo-300 mb-3">EURL Transports Nantais, Nantes (44)</p>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                                <li>Transports de marchandises National et International</li>
+                                <li>Gestion de la logistique, des itinéraires et des relations clients.</li>
+                                <li>Supervision d'une équipe de chauffeurs et coordination des opérations quotidiennes.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Éducation (Études) -->
+        <section id="education" class="container mx-auto px-4 py-16 sm:py-24">
+            <h2 class="text-4xl font-bold mb-12 text-center text-indigo-400">Éducation et Formations</h2>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+
+                <!-- Diplôme 1 -->
+                <div class="relative pl-6 sm:pl-10 pb-8 border-l-2 border-indigo-600">
+                    <div
+                        class="absolute w-4 h-4 bg-indigo-600 rounded-full mt-1 -left-2 sm:-left-2.5 border-4 border-gray-900">
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                        <p class="text-xs font-medium text-gray-400 mb-1">[2025 - 2026]</p>
+                        <h3 class="text-2xl font-semibold text-white">Formation Développeur Full-Stack</h3>
+                        <p class="text-indigo-300 mb-3">Ilaria Digital School, Paris</p>
+                        <p class="text-gray-300 text-sm">
+                            (HTML, CSS, Javascript, PHP, Python, NodeJS, Angular/React, SQL).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Diplôme 2 / Formation -->
+                <div class="relative pl-6 sm:pl-10 pb-8 border-l-2 border-indigo-600">
+                    <div
+                        class="absolute w-4 h-4 bg-indigo-600 rounded-full mt-1 -left-2 sm:-left-2.5 border-4 border-gray-900">
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                        <p class="text-xs font-medium text-gray-400 mb-1">[2013 - 2015]</p>
+                        <h3 class="text-2xl font-semibold text-white">BTS Transports et Logistiques</h3>
+                        <p class="text-indigo-300 mb-3">Lycée Léonard de Vinci, Tremblay-en-France (93)</p>
+                        <p class="text-gray-300 text-sm">
+                            Gérer des flux nationaux et internationaux, d'organiser des opérations de transport et
+                            d'optimiser les prestations logistiques.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Certification / Boot Camp à mettre plus tard -->
+
+            </div>
+        </section>
+
+
+        <!-- Section Projets -->
+        <section id="projets" class="bg-gray-900 py-16 sm:py-24 border-t border-gray-700">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center text-indigo-400">Projets Full-Stack</h2>
+                <div class="space-y-12 max-w-5xl mx-auto">
+
+                    <!-- Projet 1 : Projet Filrouge -->
+                    <div
+                        class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl flex flex-col lg:flex-row lg:space-x-8 border border-gray-700">
+                        <div class="lg:w-full">
+                            <h3 class="text-3xl font-bold mb-3 text-white">Budget_App (En cours...)</h3>
+                            <p class="text-gray-400 mb-4">
+                                Solution web full-stack de gestion financière "all-in-one". L'application permet un
+                                pilotage précis du budget (revenus/dépenses), la gestion sécurisée de cartes bancaires,
+                                ainsi qu'un module complet de paiement de factures (énergies, télécoms) et de transferts
+                                entre bénéficiaires.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-600 text-xs font-semibold px-3 py-1 rounded-full">Node.js
+                                    (MVC)</span>
+                                <span class="bg-blue-600 text-xs font-semibold px-3 py-1 rounded-full">MySQL /
+                                    mysql2</span>
+                                <span class="bg-orange-600 text-xs font-semibold px-3 py-1 rounded-full">Bootstrap
+                                    5</span>
+                                <span class="bg-purple-600 text-xs font-semibold px-3 py-1 rounded-full">API REST</span>
+                            </div>
+
+                            <p class="text-gray-300 text-sm mb-6">
+                                <strong>Défis :</strong> Architecture MVC pour la maintenabilité, sécurisation des
+                                données sensibles (hachage bcrypt, masquage des numéros de cartes), logique de calcul du
+                                solde en temps réel et moteur de recherche/filtres pour l'historique des transactions.
+                            </p>
+
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/Ice44810/ProjetFilRougeIlaria2025.git" target="_blank"
+                                    class="px-4 py-2 text-sm font-medium bg-gray-700 rounded-lg hover:bg-gray-600 transition duration-300">
+                                    <i class="bi bi-github mr-2">
+                                    </i>Code Source (GitHub)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 : Site Gestion des opérations de transports -->
+                    <div
+                        class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl flex flex-col lg:flex-row lg:space-x-8 border border-gray-700">
+                        <div class="lg:w-3/3">
+                            <h3 class="text-3xl font-bold mb-3 text-white">Site de Gestion des Opérations de Transports
+                                (encours...)</h3>
+                            <p class="text-gray-400 mb-4">
+                                Une application web complète pour la gestion des opérations de transports, incluant la
+                                planification des itinéraires, La Facturation, le suivi en temps réel et la gestion des
+                                ressources.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="bg-green-600 text-xs font-semibold px-3 py-1 rounded-full">Node.js/Express</span>
+                                <span class="bg-blue-600 text-xs font-semibold px-3 py-1 rounded-full">Mysql
+                                    (Phpmyadmin)</span>
+                                <span class="bg-orange-600 text-xs font-semibold px-3 py-1 rounded-full">API REST</span>
+                            </div>
+
+                            <p class="text-gray-300 text-sm mb-6">
+                                Défis : mise en place de DASHBOARD des opérations, optimisation des requêtes de base de
+                                données, Respect de la règlémentation sur la facturation électronique, API Google Maps.
+                            </p>
+
+                            <div class="flex space-x-4">
+                                <a href="#" target="_blank"
+                                    class="px-4 py-2 text-sm font-medium bg-gray-700 rounded-lg hover:bg-gray-600 transition duration-300">
+                                    Code Source (GitHub)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 : Site vitrine (stage)-->
+                    <div
+                        class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl flex flex-col lg:flex-row lg:space-x-8 border border-gray-700">
+                        <div class="lg:w-3/3">
+                            <h3 class="text-3xl font-bold mb-3 text-white">Site Vitrine Location de mobiliers
+                                évenementiel</h3>
+                            <p class="text-gray-400 mb-4">
+                                Une application web complète pour la gestion des opérations de transports, incluant la
+                                planification des itinéraires, La Facturation, le suivi en temps réel et la gestion des
+                                ressources.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-600 text-xs font-semibold px-3 py-1 rounded-full">Bootstrap
+                                    /css</span>
+                                <span class="bg-blue-600 text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
+                                <span class="bg-orange-600 text-xs font-semibold px-3 py-1 rounded-full">Github :
+                                    Repositorie</span>
+                                <span class="bg-orange-600 text-xs font-semibold px-3 py-1 rounded-full">Netlify :
+                                    Deployement</span>
+                            </div>
+
+                            <p class="text-gray-300 text-sm mb-6">
+                                Défis : Réalisé un site vitrine client, sans surcoût 100% gratuit (Formsubmit pour le
+                                formulaire de contact, Netlify pour l'hébergement), optimisation du design et de la
+                                réactivité avec Bootstrap 5.
+                            </p>
+
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/Ice44810/Site-Er-Prestige.git" target="_blank"
+                                    class="px-4 py-2 text-sm font-medium bg-gray-700 rounded-lg hover:bg-gray-600 transition duration-300">
+                                    Code Source (GitHub)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 4 : Outil Génération Mot de passe -->
+                    <div
+                        class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl flex flex-col lg:flex-row lg:space-x-8 border border-gray-700">
+                        <div class="lg:w-3/3">
+                            <h3 class="text-3xl font-bold mb-3 text-white">Application de Génération de Mot de Passe
+                            </h3>
+                            <p class="text-gray-400 mb-4">
+                                Une application web simple mais efficace pour générer des mots de passe sécurisés, avec
+                                des options de personnalisation pour la longueur et les types de caractères.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-600 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+                            </div>
+
+                            <p class="text-gray-300 text-sm mb-6">
+                                Défis : Conception d'une interface utilisateur simple et intuitive, implémentation
+                                d'algorithmes de génération de mots de passe robustes, gestion des préférences
+                                utilisateur pour la personnalisation des mots de passe.
+                            </p>
+
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/Ice44810/Projets-Python.git" target="_blank"
+                                    class="px-4 py-2 text-sm font-medium bg-gray-700 rounded-lg hover:bg-gray-600 transition duration-300">
+                                    Code Source (GitHub)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 5 : Jeu Pendu -->
+                    <div
+                        class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl flex flex-col lg:flex-row lg:space-x-8 border border-gray-700">
+                        <div class="lg:w-3/3">
+                            <h3 class="text-3xl font-bold mb-3 text-white">Jeu Pendu</h3>
+                            <p class="text-gray-400 mb-4">
+                                Un jeu classique du pendu implémenté en Python, avec une interface utilisateur
+                                minimaliste et des fonctionnalités de personnalisation de niveau de difficulté et de mot
+                                à deviner.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-green-600 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+                            </div>
+
+                            <p class="text-gray-300 text-sm mb-6">
+                                Défis : Conception d'une interface utilisateur simple et intuitive, implémentation
+                                d'algorithmes de génération de mots de passe robustes, gestion des préférences
+                                utilisateur pour la personnalisation des mots de passe.
+                            </p>
+
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/Ice44810/Projets-Python.git" target="_blank"
+                                    class="px-4 py-2 text-sm font-medium bg-gray-700 rounded-lg hover:bg-gray-600 transition duration-300">
+                                    Code Source (GitHub)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="container mx-auto px-4 py-16 sm:py-24 border-t border-gray-700">
+            <h2 class="text-4xl font-bold mb-10 text-center text-indigo-400">Collaborons Ensemble</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
+                Vous avez un projet innovant ou un poste à pourvoir ? N'hésitez pas à me contacter directement.
+            </p>
+
+            <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700">
+                <!-- Formulaire mis à jour pour appeler la fonction JS -->
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="contact-name" class="block text-sm font-medium text-gray-400 mb-1">Nom
+                            Complet</label>
+                        <input type="text" id="contact-name" name="name" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-500">
+                    </div>
+                    <div>
+                        <label for="contact-email" class="block text-sm font-medium text-gray-400 mb-1">Adresse
+                            E-mail</label>
+                        <input type="email" id="contact-email" name="email" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-500">
+                    </div>
+                    <div>
+                        <label for="contact-message" class="block text-sm font-medium text-gray-400 mb-1">Votre
+                            Message</label>
+                        <textarea id="contact-message" name="message" rows="5" required
+                            class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:ring-indigo-500 focus:border-indigo-500 text-white placeholder-gray-500"></textarea>
+                    </div>
+                    <button type="submit" id="submit-button"
+                        class="w-full px-6 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-lg shadow-xl hover:bg-indigo-500 transition duration-300 transform hover:scale-[1.01]">
+                        Envoyer le Message
+                    </button>
+                    <!-- Zone d'affichage des messages de statut -->
+                    <div id="status-message" class="p-3 rounded-lg text-center hidden" role="alert"></div>
+                </form>
+            </div>
+
+            <div class="flex justify-center space-x-6 mt-10">
+                <a href="https://www.linkedin.com/feed/" target="_blank"
+                    class="text-gray-400 hover:text-indigo-400 transition duration-300 text-sm">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Ice44810" target="_blank"
+                    class="text-gray-400 hover:text-indigo-400 transition duration-300 text-sm">
+                    GitHub
+                </a>
+                <a href="mailto:dev2.0projet@gmail.com"
+                    class="text-gray-400 hover:text-indigo-400 transition duration-300 text-sm">
+                    dev2.0projet@gmail.com
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de Page -->
+    <footer class="bg-gray-900 border-t border-gray-700 mt-0">
+        <div class="container mx-auto px-4 py-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2026 YANGUE KESSE Issa. Développeur Full-Stack.</p>
+        </div>
+    </footer>
+
+    <!-- Logique Firebase et Formulaire -->
+    <script type="module">
+        // Importations des modules Firebase nécessaires
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import {
+            getAuth,
+            signInAnonymously,
+            signInWithCustomToken,
+            setLogLevel
+        } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import {
+            getFirestore,
+            collection,
+            addDoc,
+            doc,
+            setDoc
+        } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // IMPORTANT : Variables globales fournies par l'environnement
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db;
+        let auth;
+        let userId = null;
+
+        // Configuration du niveau de log pour le débogage de Firestore
+        setLogLevel('Debug');
+
+        /**
+         * Affiche un message de statut après la soumission du formulaire.
+         * @param {string} message - Le message à afficher.
+         * @param {string} type - 'success' ou 'error'.
+         */
+        function displayStatus(message, type) {
+            const statusDiv = document.getElementById('status-message');
+            statusDiv.textContent = message;
+            statusDiv.classList.remove('hidden', 'status-success', 'status-error');
+            statusDiv.classList.add(type === 'success' ? 'status-success' : 'status-error');
+        }
+
+        /**
+         * Initialise Firebase et authentifie l'utilisateur.
+         */
+        async function initializeFirebase() {
+            try {
+                if (Object.keys(firebaseConfig).length === 0) {
+                    throw new Error("La configuration Firebase n'est pas disponible.");
+                }
+
+                const app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+
+                // Authentification
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+
+                userId = auth.currentUser?.uid || crypto.randomUUID();
+                console.log("Firebase et authentification réussis. User ID:", userId);
+
+            } catch (error) {
+                console.error("Erreur lors de l'initialisation de Firebase ou de l'authentification:", error);
+                displayStatus(`Erreur de configuration (voir console) : ${error.message}`, 'error');
+            }
+        }
+
+        /**
+         * Gère la soumission du formulaire de contact et stocke les données dans Firestore.
+         * @param {Event} event - L'événement de soumission du formulaire.
+         */
+        async function handleContactSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const submitButton = document.getElementById('submit-button');
+            const statusDiv = document.getElementById('status-message');
+
+            // Cacher le message de statut précédent et désactiver le bouton
+            statusDiv.classList.add('hidden');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Envoi en cours...';
+
+            if (!db || !userId) {
+                displayStatus("Le service de base de données n'est pas prêt. Veuillez réessayer.", 'error');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Envoyer le Message';
+                return;
+            }
+
+            const name = form.elements['name'].value;
+            const email = form.elements['email'].value;
+            const message = form.elements['message'].value;
+
+            // Création du document à stocker
+            const contactData = {
+                name: name,
+                email: email,
+                message: message,
+                receivedAt: new Date().toISOString(),
+                // Stockage du userId pour des raisons de sécurité Firestore (lecture privée)
+                userId: userId
+            };
+
+            // Chemin de la collection pour les messages de contact de l'utilisateur
+            const contactCollectionPath = `artifacts/${appId}/users/${userId}/contacts`;
+
+            try {
+                // Ajout du document à la collection Firestore
+                const docRef = await addDoc(collection(db, contactCollectionPath), contactData);
+
+                displayStatus('Votre message a été envoyé avec succès ! Je vous répondrai bientôt.', 'success');
+                form.reset(); // Réinitialiser le formulaire après succès
+                console.log("Message de contact sauvegardé avec ID:", docRef.id);
+
+            } catch (e) {
+                console.error("Erreur lors de l'ajout du document:", e);
+                displayStatus(`Erreur lors de l'envoi du message : ${e.message}`, 'error');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Envoyer le Message';
+            }
+        }
+
+        // Lancement de l'initialisation Firebase au chargement de la fenêtre
+        window.onload = () => {
+            initializeFirebase();
+
+            // Ajout de l'écouteur d'événement au formulaire de contact
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', handleContactSubmit);
+            }
+        };
+    </script>
+</body>
+
+</html>

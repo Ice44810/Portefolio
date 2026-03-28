@@ -1,0 +1,86 @@
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: grey;
+}
+
+section {
+ text-align: center;
+  border: 2px solid blue;
+}
+ 
+main {
+    min-height: 500px;
+    background: #f4f2f28a;
+    width: 90%;
+    border: 2px solid rgb(0, 140, 255);
+    border-radius: 20px 20px 0 0 ;
+    padding: 15px;
+}
+img {
+  width: 150px;
+  height: 150px;
+  object-position: left bottom;
+}
+h1 {
+text-align: center;
+}
+h5 {
+text-align: center;
+}
+h3 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+
+socials ul {
+flex: 1 1 auto;
+}
+.grid-container{
+    display: grid;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-columns 1fr 1fr créer 2 colonnes côte a côte */
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "i3 i4"
+    "ta ta"
+    "vi bt"
+    ;
+}
+
+input, textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+    /* éviter à ce que l'utilisateur bouge les cases comme il veut */
+}
+
+#btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.2s;
+}
+
+/* permet lorsque l'utilisateur survole la case, le texte surbrille */
+#btn-submit:hover {
+background:darkblue;
+color: white;
+}
